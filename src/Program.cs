@@ -13,12 +13,13 @@
     else return "\nInvalid scale. Please enter 'C' for Celsius or 'F' for Fahrenheit.\n";
 }
 
+
 while (true)
 {
     Console.WriteLine("Enter a temperature and its unit (C or F) or (Q) to quit:");
     string? input = Console.ReadLine();
 
-    if (input == "")
+    if (input == "" || input is null)
     {
         Console.WriteLine("Please enter a value");
         continue;
